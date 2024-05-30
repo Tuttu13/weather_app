@@ -1,8 +1,12 @@
 import { WeatherState } from "../types";
 
-// idに紐づいたtodoを取得
-export const getTodoById = async (id: string): Promise<WeatherState> => {
-  const res = await fetch(`http://localhost:3001/todos/${id}`);
-  const todo = await res.json();
-  return todo;
+// prefectureに紐づいたWeatherinfoを取得
+export const getWeatherByPrefecture = async (
+  prefecture: string
+): Promise<WeatherState> => {
+  const res = await fetch(
+    `${process.env.REACT_APP_OW_API_URL}/weather?q=${prefecture}&lang=${process.env.REACT_APP_OW_API_LANG}&appid=${process.env.REACT_APP_OW_API_KEY}`
+  );
+  const Weatherinfo = await res.json();
+  return Weatherinfo;
 };
