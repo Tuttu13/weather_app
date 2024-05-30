@@ -1,6 +1,3 @@
-FROM node:14.17.5
-
-ENV LANG=C.UTF-8
+FROM node:18.16.0-alpine
 ENV TZ=Asia/Tokyo
-
 WORKDIR /usr/src/app
