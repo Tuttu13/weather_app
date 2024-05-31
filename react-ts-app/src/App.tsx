@@ -1,16 +1,16 @@
 import {
-    FormControl,
-    Grid,
-    InputLabel,
-    MenuItem,
-    Paper,
-    Select,
-    SelectChangeEvent,
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Paper,
+  Select,
+  SelectChangeEvent,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow
 } from '@mui/material';
 import axios,{AxiosError,AxiosResponse} from 'axios';
 import React,{useEffect,useState} from 'react';
@@ -68,23 +68,27 @@ const WeatherApp: React.FC = () => {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-simple-select-label">都市選択</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={city}
-          label="都市選択"
-          onChange={handleCityChange}
-        >
-          {cities.map((city) => (
-            <MenuItem key={city.value} value={city.value}>
-              {city.label}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-      <Grid container alignItems='center' justifyContent='center' style={{ height: '100vh' }}>
+      <Grid container alignItems="flex-start" justifyContent="flex-start" style={{ marginLeft: '10vw', marginTop: '15vh' }}>
+        <Grid item>
+          <FormControl sx={{ m: 1, width: 300 }}>
+            <InputLabel id="demo-simple-select-label">都市選択</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={city}
+              label="都市選択"
+              onChange={handleCityChange}
+            >
+              {cities.map((city) => (
+                <MenuItem key={city.value} value={city.value}>
+                  {city.label}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Grid>
+      </Grid>
+      <Grid container alignItems="center" justifyContent="center" style={{ height: '40vh' }}>
         <Grid item xs={12} md={8} lg={6}>
           <Paper sx={{ width: '100%', overflowX: 'auto' }}>
             <Table stickyHeader style={{ tableLayout: 'fixed' }}>
