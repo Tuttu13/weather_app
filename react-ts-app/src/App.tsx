@@ -1,4 +1,5 @@
 import {
+  Container,
   FormControl,
   Grid,
   InputLabel,
@@ -14,38 +15,11 @@ import {
 } from '@mui/material';
 import axios,{AxiosError,AxiosResponse} from 'axios';
 import React,{useEffect,useState} from 'react';
-
-interface WeatherData {
-  name: string;
-  main: {
-    temp: number;
-    humidity: number;
-  };
-  weather: {
-    description: string;
-  }[];
-  wind: {
-    speed: number;
-    deg: number;
-  };
-}
+import {WeatherData,cities} from './weather/types';
 
 const WeatherApp: React.FC = () => {
   const [city, setCity] = useState<string>('');
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
-
-  const cities = [
-    { value: 'SAPPORO', label: '札幌' },
-    { value: 'SENDAI', label: '仙台' },
-    { value: 'TOKYO', label: '東京' },
-    { value: 'YOKOHAMA', label: '横浜' },
-    { value: 'OSAKA', label: '大阪' },
-    { value: 'KYOTO', label: '京都' },
-    { value: 'KOBE', label: '神戸' },
-    { value: 'NAGOYA', label: '名古屋' },
-    { value: 'HIROSHIMA', label: '広島' },
-    { value: 'FUKUOKA', label: '福岡' }
-  ];
 
   useEffect(() => {
     if (city) {
@@ -67,8 +41,8 @@ const WeatherApp: React.FC = () => {
   };
 
   return (
-    <div>
-      <Grid container alignItems="flex-start" justifyContent="flex-start" style={{ marginLeft: '10vw', marginTop: '15vh' }}>
+    <Container>
+      <Grid container alignItems="flex-start" justifyContent="flex-start" sx={{ mt: 5 }}>
         <Grid item>
           <FormControl sx={{ m: 1, width: 300 }}>
             <InputLabel id="demo-simple-select-label">都市選択</InputLabel>
@@ -88,18 +62,18 @@ const WeatherApp: React.FC = () => {
           </FormControl>
         </Grid>
       </Grid>
-      <Grid container alignItems="center" justifyContent="center" style={{ height: '40vh' }}>
-        <Grid item xs={12} md={8} lg={6}>
-          <Paper sx={{ width: '100%', overflowX: 'auto' }}>
-            <Table stickyHeader style={{ tableLayout: 'fixed' }}>
+      <Grid container alignItems="center" justifyContent="center" sx={{ mt: 10 }}>
+        <Grid item xs={12}>
+          <Paper sx={{ width: '100%', overflowX: 'auto', margin: '0 auto' }}>
+            <Table stickyHeader sx={{ tableLayout: 'fixed' }}>
               <TableHead>
                 <TableRow>
-                  <TableCell>都市名</TableCell>
-                  <TableCell>気温（摂氏）</TableCell>
-                  <TableCell>天気</TableCell>
-                  <TableCell>風速</TableCell>
-                  <TableCell>風向き</TableCell>
-                  <TableCell>湿度</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>都市名</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>気温（摂氏）</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>天気</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>風速</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>風向き</TableCell>
+                  <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>湿度</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -118,7 +92,7 @@ const WeatherApp: React.FC = () => {
           </Paper>
         </Grid>
       </Grid>
-    </div>
+    </Container>
   );
 };
 
