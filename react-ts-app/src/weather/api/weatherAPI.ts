@@ -1,6 +1,6 @@
-import axios, { AxiosError, AxiosResponse } from "axios";
-import { useEffect } from "react";
-import { WeatherData } from "../types";
+import axios, { AxiosError, AxiosResponse } from 'axios';
+import { useEffect } from 'react';
+import { WeatherData } from '../types';
 
 export const useFetchWeatherData = (
   city: string,
@@ -16,7 +16,7 @@ export const useFetchWeatherData = (
           setWeatherData(response.data);
         })
         .catch((error: AxiosError) => {
-          console.error("Error fetching the weather data", error);
+          console.error('Error fetching the weather data', error);
         });
     }
   }, [city]);

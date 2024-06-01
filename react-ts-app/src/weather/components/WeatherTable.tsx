@@ -1,7 +1,14 @@
 // WeatherTable.tsx
-import {Paper,Table,TableBody,TableCell,TableHead,TableRow} from '@mui/material';
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+} from '@mui/material';
 import React from 'react';
-import {WeatherData} from '../types';
+import { WeatherData } from '../types';
 
 interface WeatherTableProps {
   weatherData: WeatherData | null;
@@ -30,12 +37,24 @@ const WeatherTable: React.FC<WeatherTableProps> = ({ weatherData }) => {
       <Table stickyHeader sx={{ tableLayout: 'fixed' }}>
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>都市名</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>気温（摂氏）</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>天気</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>風速</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>風向き</TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>湿度</TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+              都市名
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+              気温（摂氏）
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+              天気
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+              風速
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+              風向き
+            </TableCell>
+            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+              湿度
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>{renderWeatherDataRow()}</TableBody>

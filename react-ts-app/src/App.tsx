@@ -1,11 +1,11 @@
-import {Container,Grid} from '@mui/material';
-import React,{useState} from 'react';
-import {useFetchWeatherData} from './weather/api/weatherAPI';
-import {cities} from './weather/cities';
+import { Container, Grid } from '@mui/material';
+import React, { useState } from 'react';
+import { useFetchWeatherData } from './weather/api/weatherAPI';
+import { cities } from './weather/cities';
 import WeatherTable from './weather/components//WeatherTable';
 import CitySelect from './weather/components/CitySelect';
-import {WeatherData} from './weather/types';
-import {useHandleCityChange} from './weather/utiles/weatherFunctions';
+import { WeatherData } from './weather/types';
+import { useHandleCityChange } from './weather/utiles/weatherFunctions';
 
 const WeatherApp: React.FC = () => {
   const [city, setCity] = useState<string>('');
