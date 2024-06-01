@@ -8,7 +8,7 @@
 
 ## 天気API
 以下は、今回使用した天気APIになります。  
-```OpenWeatherMap```  
+```OpenWeatherMap Current weather data```  
 
 ## アプリ ビルド手順
 以下は、ビルド手順になります。 　
