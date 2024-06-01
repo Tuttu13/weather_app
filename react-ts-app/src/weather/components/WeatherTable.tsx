@@ -36,22 +36,58 @@ const WeatherTable: React.FC<WeatherTableProps> = ({ weatherData }) => {
       <Table stickyHeader sx={{ tableLayout: 'fixed' }}>
         <TableHead>
           <TableRow>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+            <TableCell
+              sx={{
+                fontWeight: 'bold',
+                backgroundColor: '#e0f2f1',
+                borderBottom: '1px solid black',
+              }}
+            >
               都市名
             </TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+            <TableCell
+              sx={{
+                fontWeight: 'bold',
+                backgroundColor: '#e0f2f1',
+                borderBottom: '1px solid black',
+              }}
+            >
               気温（摂氏）
             </TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+            <TableCell
+              sx={{
+                fontWeight: 'bold',
+                backgroundColor: '#e0f2f1',
+                borderBottom: '1px solid black',
+              }}
+            >
               天気
             </TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+            <TableCell
+              sx={{
+                fontWeight: 'bold',
+                backgroundColor: '#e0f2f1',
+                borderBottom: '1px solid black',
+              }}
+            >
               風速
             </TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+            <TableCell
+              sx={{
+                fontWeight: 'bold',
+                backgroundColor: '#e0f2f1',
+                borderBottom: '1px solid black',
+              }}
+            >
               風向き
             </TableCell>
-            <TableCell sx={{ fontWeight: 'bold', backgroundColor: '#e0f2f1' }}>
+            <TableCell
+              sx={{
+                fontWeight: 'bold',
+                backgroundColor: '#e0f2f1',
+                borderBottom: '1px solid black',
+              }}
+            >
               湿度
             </TableCell>
           </TableRow>
