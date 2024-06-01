@@ -13,11 +13,11 @@ export const useFetchWeatherData = (
           `${process.env.REACT_APP_OW_API_URL}?q=${city}&lang=${process.env.REACT_APP_OW_API_LANG}&appid=${process.env.REACT_APP_OW_API_KEY}`
         )
         .then((response: AxiosResponse<WeatherData>) => {
-          console.log(`Fetched weather data for ${city}:`, response.data); // 都市名をログに追加
+          console.log(`Fetched weather data for ${city}:`, response.data);
           setWeatherData(response.data);
         })
         .catch((error: AxiosError) => {
-          console.error(`Error fetching the weather data for ${city}`, error); // エラーメッセージにも都市名を追加
+          console.error(`Error fetching the weather data for ${city}`, error);
         });
     }
   }, [city, setWeatherData]);
