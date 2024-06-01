@@ -35,7 +35,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ※以下の公式ホームページに各言語の値が記載されています。  
 ```https://openweathermap.org/current```
 
-# ディレクトリ構成
+## ディレクトリ構成
 ```
 ├── WEATHER_APP/
 │   └── react-ts-app/
@@ -70,7 +70,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 └── README.md
 ```
 
-# 備考
+## 備考
 テスト実施時に出力される以下のwarningは、こちらの情報によると```https://github.com/facebook/react/issues/28915```React 18.3のバグ  
 ``` TEXT
 Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.```
