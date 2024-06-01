@@ -1,12 +1,12 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { WeatherData } from '../types';
 
 export const useFetchWeatherData = (
   city: string,
   setWeatherData: React.Dispatch<React.SetStateAction<WeatherData | null>>
 ) => {
-  useEffect(() => {
+  const fetchWeatherData = useCallback(() => {
     if (city) {
       axios
         .get<WeatherData>(
@@ -19,5 +19,9 @@ export const useFetchWeatherData = (
           console.error('Error fetching the weather data', error);
         });
     }
-  }, [city]);
+  }, [city, setWeatherData]);
+
+  useEffect(() => {
+    fetchWeatherData();
+  }, [fetchWeatherData]);
 };

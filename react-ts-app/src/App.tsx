@@ -2,8 +2,8 @@ import { Container, Grid } from '@mui/material';
 import React, { useState } from 'react';
 import { useFetchWeatherData } from './weather/api/weatherAPI';
 import { cities } from './weather/cities';
-import WeatherTable from './weather/components//WeatherTable';
 import CitySelect from './weather/components/CitySelect';
+import WeatherTable from './weather/components/WeatherTable';
 import { WeatherData } from './weather/types';
 import { useHandleCityChange } from './weather/utiles/weatherFunctions';
 
@@ -16,10 +16,24 @@ const WeatherApp: React.FC = () => {
 
   return (
     <Container>
-      <Grid container alignItems="flex-start" justifyContent="flex-start" sx={{ mt: 20 }}>
-        <CitySelect cities={cities} selectedCity={city} onCityChange={handleCityChange} />
+      <Grid
+        container
+        alignItems="flex-start"
+        justifyContent="flex-start"
+        sx={{ mt: 20 }}
+      >
+        <CitySelect
+          cities={cities}
+          selectedCity={city}
+          onCityChange={handleCityChange}
+        />
       </Grid>
-      <Grid container alignItems="center" justifyContent="center" sx={{ mt: 10 }}>
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+        sx={{ mt: 10 }}
+      >
         <WeatherTable weatherData={weatherData} />
       </Grid>
     </Container>
