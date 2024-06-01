@@ -48,7 +48,13 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.1",
     "@types/axios": "^0.14.0",
     "jest": "^27.5.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^axios$": "axios/dist/node/axios.cjs"
+    }
   }
 }
