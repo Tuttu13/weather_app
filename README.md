@@ -35,6 +35,41 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ※以下の公式ホームページに各言語の値が記載されています。  
 ```https://openweathermap.org/current```
 
+# ディレクトリ構成
+```
+├── WEATHER_APP/
+│   └── react-ts-app/
+│       ├── node_modules
+│       ├── public
+│       ├── src/
+│       │   ├── test/
+│       │   │   ├── api
+│       │   │   └── components
+│       │   └── weather/
+│       │       ├── api/
+│       │       │   └── weatherAPI.ts    ：データ処理
+│       │       ├── components/
+│       │       │   ├── CitySelect.tsx   ：セレクト部分
+│       │       │   └── WeatherTable.tsx ：テーブル部分
+│       │       ├── utiles/
+│       │       │   └── weatherFunctions.ts
+│       │       ├── cities.ts ：主要都市定義ファイル
+│       │       └── types.ts  ：型定義ファイル
+│       ├── App.css
+│       ├── App.test.tsx
+│       ├── App.tsx
+│       ├── index.css
+│       ├── index.tsx
+│       ├── logo.svg
+│       ├── react-app-env.d.ts
+│       ├── reportWebVitals.ts
+│       └── setupTests.ts
+├── .prettierrc ：フォーマット設定ファイル
+├── docker-compose.yaml
+├── Dockerfile
+└── README.md
+```
+
 # 備考
 テスト実施時に出力される以下のwarningは、こちらの情報によると```https://github.com/facebook/react/issues/28915```React 18.3のバグ  
 ``` TEXT
