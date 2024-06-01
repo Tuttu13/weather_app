@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from '@testing-library/react';
-import CitySelect from '../weather/components/CitySelect';
+import CitySelect from '../../weather/components/CitySelect';
 
 // モックの都市データ
 const cities = [

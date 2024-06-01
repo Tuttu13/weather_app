@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import WeatherTable from '../weather/components//WeatherTable';
+import WeatherTable from '../../weather/components/WeatherTable';
 
 describe('WeatherTable component', () => {
   const weatherData = {
