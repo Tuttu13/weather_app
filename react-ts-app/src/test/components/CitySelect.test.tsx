@@ -17,46 +17,48 @@ const cities: City[] = [
   { value: 'FUKUOKA', label: '福岡' },
 ];
 
-test('CitySelect component renders correctly', () => {
-  const selectedCity = '';
-  const mockOnChange = jest.fn();
+describe('CitySelect component', () => {
+  test('セレクトボックスの初期表示の確認', () => {
+    const selectedCity = '';
+    const mockOnChange = jest.fn();
 
-  render(
-    <CitySelect
-      cities={cities}
-      selectedCity={selectedCity}
-      onCityChange={mockOnChange}
-    />
-  );
+    render(
+      <CitySelect
+        cities={cities}
+        selectedCity={selectedCity}
+        onCityChange={mockOnChange}
+      />
+    );
 
-  // セレクトボックスのラベルを取得
-  const selectLabel = screen.getByLabelText('都市選択');
+    // セレクトボックスのラベルを取得
+    const selectLabel = screen.getByLabelText('都市選択');
 
-  // セレクトボックスが正しく表示されていることを確認
-  expect(selectLabel).toBeInTheDocument();
-});
+    // セレクトボックスが正しく表示されていることを確認
+    expect(selectLabel).toBeInTheDocument();
+  });
 
-test('CitySelect component displays all cities', () => {
-  const selectedCity = '';
-  const mockOnChange = jest.fn();
+  test('セレクト画面に主要都市が出力されていることの確認', () => {
+    const selectedCity = '';
+    const mockOnChange = jest.fn();
 
-  render(
-    <CitySelect
-      cities={cities}
-      selectedCity={selectedCity}
-      onCityChange={mockOnChange}
-    />
-  );
+    render(
+      <CitySelect
+        cities={cities}
+        selectedCity={selectedCity}
+        onCityChange={mockOnChange}
+      />
+    );
 
-  // セレクトボックスを開く
-  const selectLabel = screen.getByLabelText('都市選択');
-  fireEvent.mouseDown(selectLabel);
+    // セレクトボックスを開く
+    const selectLabel = screen.getByLabelText('都市選択');
+    fireEvent.mouseDown(selectLabel);
 
-  // 各都市のMenuItemが表示されていることを確認
-  cities.forEach((city) => {
-    console.log(`確認中の都市: ${city.label}`);
-    // 各都市がセレクトメニュー内に表示されていることを確認
-    const cityOption = screen.getByText(city.label);
-    expect(cityOption).toBeInTheDocument();
+    // 各都市のMenuItemが表示されていることを確認
+    cities.forEach((city) => {
+      console.log(`確認中の都市: ${city.label}`);
+      // 各都市がセレクトメニュー内に表示されていることを確認
+      const cityOption = screen.getByText(city.label);
+      expect(cityOption).toBeInTheDocument();
+    });
   });
 });

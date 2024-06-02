@@ -13,7 +13,19 @@ describe('WeatherTable component', () => {
     wind: { speed: 5, deg: 180 },
   };
 
-  it('renders weather data correctly', () => {
+  test('初期表示の確認', () => {
+    render(<WeatherTable weatherData={null} />); // nullで初期化された状態
+
+    // 各種データが表示されていないことを確認
+    expect(screen.queryByText('東京都')).not.toBeInTheDocument();
+    expect(screen.queryByText('26.9 °C')).not.toBeInTheDocument();
+    expect(screen.queryByText('曇り')).not.toBeInTheDocument();
+    expect(screen.queryByText('5 m/s')).not.toBeInTheDocument();
+    expect(screen.queryByText('180 °')).not.toBeInTheDocument();
+    expect(screen.queryByText('80 %')).not.toBeInTheDocument();
+  });
+
+  test('天気情報が出力されることの確認', () => {
     render(<WeatherTable weatherData={weatherData} />);
 
     // 都市名が表示されていることを確認

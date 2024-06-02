@@ -2,12 +2,11 @@ import { act, renderHook } from '@testing-library/react-hooks';
 import { useFetchWeatherData } from '../../weather/api/weatherAPI';
 
 describe('useFetchWeatherData', () => {
-  it('fetches weather data for Tokyo', async () => {
+  test('指定された都市の天気データを取得ことの確認(東京)', async () => {
     // setWeatherData 関数をモック化
     const setWeatherData = jest.fn();
 
     // 外部APIのため、モック化してテストする
-    // モック化されたaxiosモジュールを取得
     const mockedAxios = require('axios');
 
     // モックの実装を設定
