@@ -35,7 +35,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ※以下の公式ホームページに各言語の値が記載されています。  
 ```https://openweathermap.org/current```
 
-## ディレクトリ構成
+# ディレクトリ構成
 ```
 ├── WEATHER_APP/
 │   └── react-ts-app/
@@ -60,10 +60,6 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       ├── App.tsx
 │       ├── index.css
 │       ├── index.tsx
-│       ├── logo.svg
-│       ├── react-app-env.d.ts
-│       ├── reportWebVitals.ts
-│       └── setupTests.ts
 ├── .prettierrc ：フォーマット設定ファイル
 ├── docker-compose.yaml
 ├── Dockerfile
