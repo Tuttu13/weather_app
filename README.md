@@ -39,6 +39,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ```https://openweathermap.org/current```
 
 # ディレクトリ構成
+以下は、ディレクトリ構成になります
 ```
 ├── WEATHER_APP/
 │   └── react-ts-app/
@@ -53,21 +54,28 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │   │   │   └── WeatherTable.test.tsx
 │       │   │   └── utils/
 │       │   │       └── weatherFunctions.test.ts
-│       │   └── weather/
-│       │       ├── api/
-│       │       │   └── weatherAPI.ts    ：データ処理
-│       │       ├── components/
-│       │       │   ├── CitySelect.tsx   ：セレクト部分
-│       │       │   └── WeatherTable.tsx ：テーブル部分
-│       │       ├── utils/
-│       │       │   └── weatherFunctions.ts
-│       │       ├── cities.ts ：主要都市定義ファイル
-│       │       └── types.ts  ：型定義ファイル
-│       ├── App.css
-│       ├── App.test.tsx
-│       ├── App.tsx
-│       ├── index.css
-│       └── index.tsx
+│       │   ├── weather/
+│       │   │   ├── api/
+│       │   │   │   └── weatherAPI.ts    ：データ処理
+│       │   │   ├── components/
+│       │   │   │   ├── CitySelect.tsx   ：セレクト部分
+│       │   │   │   └── WeatherTable.tsx ：テーブル部分
+│       │   │   ├── utils/
+│       │   │   │   └── weatherFunctions.ts
+│       │   │   ├── cities.ts ：主要都市定義ファイル
+│       │   │   └── types.ts  ：型定義ファイル
+│       │   ├── App.css
+│       │   ├── App.test.tsx
+│       │   ├── App.tsx
+│       │   ├── index.css
+│       │   └── index.tsx
+│       ├── .env ：環境変数設定ファイル
+│       ├── .gitignore
+│       ├── jest.config.js
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── README.md
+│       └── tsconfig.json
 ├── .prettierrc ：フォーマット設定ファイル
 ├── docker-compose.yaml
 ├── Dockerfile
