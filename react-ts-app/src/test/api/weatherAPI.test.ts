@@ -45,12 +45,9 @@ describe('useFetchWeatherData', () => {
     // useFetchWeatherData フックを呼び出して東京のデータを取得する
     renderHook(() => useFetchWeatherData('TOKYO', setWeatherData));
 
-    // フックが非同期処理を実行するのを待機する必要はない
-    // レスポンスが返ってきてから、setWeatherDataが呼び出されるのを待つ
     // setWeatherDataが非同期に実行されるため、actを使用する
-    await act(async () => {
-      // 待機する必要はないので、空の関数を渡す
-    });
+    // 非同期な処理（axiosのHTTPリクエスト）が行われ、その後にsetWeatherData関数が呼び出されるという流れ
+    await act(async () => {});
 
     // setWeatherData 関数が東京のデータで呼び出されたかを確認
     expect(setWeatherData).toHaveBeenCalledWith(
