@@ -1,6 +1,6 @@
 import { SelectChangeEvent } from '@mui/material';
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useHandleCityChange } from '../../weather/utiles/weatherFunctions';
+import { useHandleCityChange } from '../../weather/utils/weatherFunctions';
 
 describe('useHandleCityChange', () => {
   test('未設定から東京を設定する確認', () => {

@@ -5,7 +5,7 @@ import { cities } from './weather/cities';
 import CitySelect from './weather/components/CitySelect';
 import WeatherTable from './weather/components/WeatherTable';
 import { WeatherData } from './weather/types';
-import { useHandleCityChange } from './weather/utiles/weatherFunctions';
+import { useHandleCityChange } from './weather/utils/weatherFunctions';
 
 const WeatherApp: React.FC = () => {
   const [city, setCity] = useState<string>('');
