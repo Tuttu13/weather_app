@@ -48,9 +48,11 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │   ├── test/
 │       │   │   ├── api/
 │       │   │   │   └── weatherAPI.test.ts
-│       │   │   └── components/
-│       │   │       ├── CitySelect.test.tsx
-│       │   │       └── WeatherTable.test.tsx
+│       │   │   │── components/
+│       │   │   │   ├── CitySelect.test.tsx
+│       │   │   │   └── WeatherTable.test.tsx
+│       │   │   └── utiles/
+│       │   │       └── weatherFunctions.test.ts
 │       │   └── weather/
 │       │       ├── api/
 │       │       │   └── weatherAPI.ts    ：データ処理
