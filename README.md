@@ -51,7 +51,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │   │   │── components/
 │       │   │   │   ├── CitySelect.test.tsx
 │       │   │   │   └── WeatherTable.test.tsx
-│       │   │   └── utiles/
+│       │   │   └── utils/
 │       │   │       └── weatherFunctions.test.ts
 │       │   └── weather/
 │       │       ├── api/
@@ -59,7 +59,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │       ├── components/
 │       │       │   ├── CitySelect.tsx   ：セレクト部分
 │       │       │   └── WeatherTable.tsx ：テーブル部分
-│       │       ├── utiles/
+│       │       ├── utils/
 │       │       │   └── weatherFunctions.ts
 │       │       ├── cities.ts ：主要都市定義ファイル
 │       │       └── types.ts  ：型定義ファイル
@@ -73,8 +73,3 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ├── Dockerfile
 └── README.md
 ```
-
-## 備考
-テスト実施時に出力される以下のwarningは、こちらの情報によると```https://github.com/facebook/react/issues/28915```React 18.3のバグ  
-``` TEXT
-Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.```
