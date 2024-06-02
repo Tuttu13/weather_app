@@ -21,10 +21,10 @@ const CitySelect: React.FC<CitySelectProps> = ({
 }) => {
   return (
     <FormControl sx={{ m: 0, width: 125 }}>
-      <InputLabel id="demo-simple-select-label">都市選択</InputLabel>
+      <InputLabel id="city-select-label">都市選択</InputLabel>
       <Select
-        labelId="demo-simple-select-label"
-        id="demo-simple-select"
+        labelId="city-select-label"
+        id="city-select"
         value={selectedCity}
         label="都市選択"
         onChange={onCityChange}
