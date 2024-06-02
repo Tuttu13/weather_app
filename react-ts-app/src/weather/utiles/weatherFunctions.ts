@@ -1,5 +1,3 @@
-// weatherFunctions.ts
-
 import { SelectChangeEvent } from '@mui/material';
 
 export const useHandleCityChange = (
