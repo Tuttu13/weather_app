@@ -2,8 +2,8 @@
 
 ## 使用した技術
 以下の3点は、使用した技術になります
-- docker
-- React(18.3.1)
+- Docker
+- React (18.3.1)
 - TypeScript
 
 ## 天気API
@@ -13,17 +13,25 @@
 ## アプリ ビルド手順
 以下は、ビルド手順になります
 1. 以下のコマンドを実行して、リモートリポジトリをクローンしてください  
-```git clone XXX```  
-※XXXに、リモートリポジトリのURLを設定してください  
-1. 以下のコマンドをWEATHER_APP/直下で実行して、アプリをビルドしてください  
-```docker compose build```  
-1. 以下のコマンドをWEATHER_APP/直下で実行して、コンテナを起動してください  
-```docker compose up -d ```  
-※reactアプリが立ち上がるまで、少々時間がかかります
+    ```bash
+    git clone XXX
+    ```
+    ※XXXに、リモートリポジトリのURLを設定してください  
+2. 以下のコマンドをWEATHER_APP/直下で実行して、アプリをビルドしてください  
+    ```bash
+    docker compose build
+    ```
+3. 以下のコマンドをWEATHER_APP/直下で実行して、コンテナを起動してください  
+    ```bash
+    docker compose up -d
+    ```
+    ※Reactアプリが立ち上がるまで、少々時間がかかります
 
-※以下のコマンドは、コンテナを終了するコマンドになります  
-```docker compose down```  
-※コンテナが立ち上がらない場合は、コンテナを終了し、再度起動してください
+    ※以下のコマンドは、コンテナを終了するコマンドになります  
+    ```bash
+    docker compose down
+    ```  
+    ※コンテナが立ち上がらない場合は、コンテナを終了し、再度起動してください
 
 ## アプリ 操作方法
 
@@ -33,7 +41,7 @@
 ## 環境変数の設定
 言語設定を変える場合、API KEYを変える場合は、```react-ts-app/.env```の環境変数の設定を行ってください  
 以下は、デフォルトの環境変数の設定ファイルになります  
-```
+```env
 # API URL
 REACT_APP_OW_API_URL=https://api.openweathermap.org/data/2.5/weather
 # 言語設定
@@ -55,7 +63,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │   ├── test/
 │       │   │   ├── api/
 │       │   │   │   └── weatherAPI.test.ts
-│       │   │   │── components/
+│       │   │   ├── components/
 │       │   │   │   ├── CitySelect.test.tsx
 │       │   │   │   └── WeatherTable.test.tsx
 │       │   │   └── utils/
@@ -86,4 +94,5 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ├── docker-compose.yaml
 ├── Dockerfile
 └── README.md
+
 ```
