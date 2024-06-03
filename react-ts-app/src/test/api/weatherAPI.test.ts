@@ -2,7 +2,7 @@ import { act, renderHook } from '@testing-library/react-hooks';
 import { useFetchWeatherData } from '../../weather/api/weatherAPI';
 
 describe('useFetchWeatherData', () => {
-  test('指定された都市の天気データを取得ことの確認(東京)', async () => {
+  test('指定された都市の天気データを取得することの確認(東京)', async () => {
     // setWeatherData 関数をモック化
     const setWeatherData = jest.fn();
 
