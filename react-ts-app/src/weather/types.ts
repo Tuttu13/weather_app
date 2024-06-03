@@ -1,3 +1,4 @@
+import { SelectChangeEvent } from '@mui/material/Select';
 export interface WeatherData {
   name: string;
   main: {
@@ -17,3 +18,13 @@ export interface City {
   label: string;
 }
 [];
+
+export interface WeatherTableProps {
+  weatherData: WeatherData | null;
+}
+
+export interface CitySelectProps {
+  cities: City[];
+  selectedCity: string;
+  onCityChange: (event: SelectChangeEvent<string>) => void;
+}

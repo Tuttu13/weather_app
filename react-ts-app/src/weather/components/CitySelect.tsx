@@ -1,18 +1,6 @@
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import React from 'react';
-import { City } from '../types';
-
-interface CitySelectProps {
-  cities: City[];
-  selectedCity: string;
-  onCityChange: (event: SelectChangeEvent<string>) => void;
-}
+import { City, CitySelectProps } from '../types';
 
 const CitySelect: React.FC<CitySelectProps> = ({
   cities,

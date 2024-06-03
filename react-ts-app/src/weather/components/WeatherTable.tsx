@@ -7,11 +7,7 @@ import {
   TableRow,
 } from '@mui/material';
 import React from 'react';
-import { WeatherData } from '../types';
-
-interface WeatherTableProps {
-  weatherData: WeatherData | null;
-}
+import { WeatherTableProps } from '../types';
 
 const WeatherTable: React.FC<WeatherTableProps> = ({ weatherData }) => {
   const renderWeatherDataRow = () => {
