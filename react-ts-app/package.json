@@ -55,6 +55,9 @@
   "jest": {
     "moduleNameMapper": {
       "^axios$": "axios/dist/node/axios.cjs"
-    }
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ]
   }
 }
