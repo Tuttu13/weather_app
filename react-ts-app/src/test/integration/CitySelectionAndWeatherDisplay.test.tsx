@@ -13,6 +13,10 @@ jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('CitySelection and WeatherDisplay Integration Test', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test('初期値から別の都市を選択する', async () => {
     const tokyoWeatherData = {
       data: {
@@ -80,7 +84,7 @@ describe('CitySelection and WeatherDisplay Integration Test', () => {
 
     render(<App />);
 
-    // 都市選択ボックスをクリック
+    // 初回の都市選択ボックスをクリック
     fireEvent.mouseDown(screen.getByLabelText('都市選択'));
     // ドロップダウンメニューを取得
     const listbox = screen.getByRole('listbox');
@@ -97,8 +101,8 @@ describe('CitySelection and WeatherDisplay Integration Test', () => {
       expect(within(weatherTable).getByText('80 %')).toBeInTheDocument();
     });
 
-    // 都市選択ボックスを再度クリック
-    fireEvent.mouseDown(screen.getByLabelText('都市選択'));
+    // 別の都市選択ボックスを再度クリック
+    fireEvent.mouseDown(screen.getByLabelText('東京'));
     // ドロップダウンメニューを取得
     const listbox2 = screen.getByRole('listbox');
     // ドロップダウンメニューから大阪を選択
