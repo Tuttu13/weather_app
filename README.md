@@ -21,7 +21,12 @@
     ```bash
     docker compose build
     ```
-3. 以下のコマンドをWEATHER_APP/直下で実行して、コンテナを起動してください  
+3. 以下のコマンドをreact-ts-app/src/直下で実行して、パッケージをインストールしてください  
+    ```bash
+    npm install --force
+    ```
+    ※パッケージ(@testing-library/react-hooks, ts-jest)が依存関係にあるため,強制インストールを行います。
+4. 以下のコマンドをWEATHER_APP/直下で実行して、コンテナを起動してください  
     ```bash
     docker compose up -d
     ```
