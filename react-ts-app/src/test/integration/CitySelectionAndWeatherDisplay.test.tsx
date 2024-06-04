@@ -13,10 +13,6 @@ jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('CitySelection and WeatherDisplay Integration Test', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
   test('初期値から別の都市を選択する', async () => {
     const tokyoWeatherData = {
       data: {
