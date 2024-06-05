@@ -5,7 +5,7 @@ import { WeatherData } from '../types';
 export const useFetchWeatherData = (
   city: string,
   setWeatherData: React.Dispatch<React.SetStateAction<WeatherData | null>>
-) => {
+): void => {
   const fetchWeatherData = useCallback(() => {
     if (city) {
       axios
