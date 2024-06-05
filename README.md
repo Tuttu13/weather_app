@@ -21,7 +21,7 @@
     ```bash
     docker compose build
     ```
-3. 以下のコマンドをreact-ts-app/src/直下で実行して、パッケージをインストールしてください  
+3. 以下のコマンドをreact-ts-app/直下で実行して、パッケージをインストールしてください  
     ```bash
     npm install --force
     ```
