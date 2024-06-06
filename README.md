@@ -23,7 +23,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ``` 
 ※REACT_APP_OW_API_KEYは自身のAPIキーに置き換えてください。APIキーはOpenWeatherMapの公式サイトから取得できます。  
 ※以下の公式ホームページに各言語の値が記載されています  
-```https://openweathermap.org/current```
+```https://openweathermap.org/current```  
 ※記載されているAPIキーは、2024/06/06 19:00をもちましてセキュリティの都合上削除します。
 
 ## アプリ ビルド手順
