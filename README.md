@@ -30,10 +30,10 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 以下は、ビルド手順になります
 1. 以下のコマンドを実行して、リモートリポジトリをクローンしてください  
     ```bash
-    git clone XXX
+    git clone YOUR_REPOSITORY_URL
     ```
     ※XXXに、リモートリポジトリのURLを設定してください  
-2. 以下のコマンドをWEATHER_APP/直下で実行して、アプリをビルドしてください  
+2. 以下のコマンドを`WEATHER_APP/`ディレクトリで実行して、アプリをビルドしてください  
     ```bash
     docker compose build
     ```
@@ -41,18 +41,18 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
     ```bash
     npm install --force
     ```
-    ※パッケージ(@testing-library/react-hooks, ts-jest)が依存関係にあるため,強制インストールを行います。
-4. 以下のコマンドをWEATHER_APP/直下で実行して、コンテナを起動してください  
+    ※パッケージ(@testing-library/react-hooks, ts-jest)が依存関係にあるため、強制インストールします。
+4. 以下のコマンドを`WEATHER_APP/`ディレクトリで実行して、コンテナを起動してください  
     ```bash
     docker compose up -d
     ```
-    ※Reactアプリが立ち上がるまで、少々時間がかかります
+    ※Reactアプリの起動には少々時間がかかります。起動後、ブラウザでhttp://localhost:3000にアクセスしてください。
 
-    ※以下のコマンドは、コンテナを終了するコマンドになります  
+5. 以下のコマンドはコンテナを終了する際に使用します。
     ```bash
-    docker compose down
-    ```  
-    ※コンテナが立ち上がらない場合は、コンテナを終了し、再度起動してください
+    docker compose up -d
+    ```
+    ※コンテナが正しく起動しない場合は、終了して再度起動してください。
 
 ## アプリ 操作方法
 
@@ -73,6 +73,8 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │   │   ├── components/
 │       │   │   │   ├── CitySelect.test.tsx
 │       │   │   │   └── WeatherTable.test.tsx
+│       │   │   ├── integration/
+│       │   │   │   └── CitySelectionAndWeatherDisplay.test.tsx
 │       │   │   └── utils/
 │       │   │       └── weatherFunctions.test.ts
 │       │   ├── weather/
@@ -90,7 +92,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 │       │   ├── App.tsx
 │       │   ├── index.css
 │       │   └── index.tsx
-│       ├── .env ：環境変数設定ファイル
+│       ├── .env.local ：環境変数設定ファイル
 │       ├── .gitignore
 │       ├── jest.config.js
 │       ├── package-lock.json
