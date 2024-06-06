@@ -24,7 +24,7 @@ const WeatherTable: React.FC<WeatherTableProps> = ({ weatherData }) => {
           <img
             src={iconUrl}
             alt={weather[0].description}
-            style={{ width: '50px', height: '50px', marginRight: '8px' }} // サイズを小さくするためのスタイル
+            style={{ width: '50px', height: '50px', marginRight: '8px' }}
           />
           {weather[0].description}
         </TableCell>
