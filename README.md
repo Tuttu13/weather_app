@@ -47,7 +47,7 @@ REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
     docker compose up -d
     ```
     ※Reactアプリの起動には少々時間がかかります。  
-    起動後、ブラウザでhttp://localhost:3000にアクセスしてください。
+    起動後、ブラウザで`http://localhost:3000`にアクセスしてください。
 
 5. 以下のコマンドはコンテナを終了する際に使用します。
     ```bash
