@@ -14,7 +14,7 @@
 言語設定やAPIキーを変更する場合は、`react-ts-app/.env.local`ファイルを基に`react-ts-app/.env` ファイルを作成してください。
 以下は、デフォルトの環境変数設定です。
 ```env
-# API URL
+# エンドポイント
 REACT_APP_OW_API_URL=https://api.openweathermap.org/data/2.5/weather
 # 言語設定
 REACT_APP_OW_API_LANG=ja
