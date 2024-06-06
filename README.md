@@ -1,18 +1,18 @@
 # 天気を表示する小さいアプリの実装
 
 ## 使用した技術
-以下の3点は、使用した技術になります
-- Docker
-- React (18.3.1)
-- TypeScript
+このプロジェクトで使用した主な技術は以下の通りです。
+- **Docker**
+- **React** (バージョン 18.3.1)
+- **TypeScript**
 
 ## 天気API
-以下は、今回使用した天気APIになります  
-```OpenWeatherMap Current weather data```  
+以下のAPIを使用して天気情報を取得しています。
+- [OpenWeatherMap Current Weather Data](https://openweathermap.org/current)
 
 ## 環境変数の設定
-言語設定を変える場合、API KEYを変える場合は、```react-ts-app/.env```の環境変数の設定を行ってください  
-以下は、デフォルトの環境変数の設定ファイルになります  
+言語設定やAPIキーを変更する場合は、`react-ts-app/.env.local`ファイルを基に`react-ts-app/.env` ファイルを作成してください。
+以下は、デフォルトの環境変数設定です。
 ```env
 # API URL
 REACT_APP_OW_API_URL=https://api.openweathermap.org/data/2.5/weather
@@ -21,6 +21,7 @@ REACT_APP_OW_API_LANG=ja
 # API KEY
 REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
 ``` 
+※REACT_APP_OW_API_KEYは自身のAPIキーに置き換えてください。APIキーはOpenWeatherMapの公式サイトから取得できます。  
 ※以下の公式ホームページに各言語の値が記載されています  
 ```https://openweathermap.org/current```
 ※記載されているAPIキーは、2024/06/06 19:00をもちましてセキュリティの都合上削除します。
