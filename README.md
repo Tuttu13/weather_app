@@ -11,7 +11,7 @@
 - [OpenWeatherMap Current Weather Data](https://openweathermap.org/current)
 
 ## 環境変数の設定
-言語設定やAPIキーを変更する場合は、`react-ts-app/.env.local`ファイルを基に`react-ts-app/.env` ファイルを作成してください。
+言語設定やAPIキーを変更する場合は、`react-ts-app/.env.local`ファイルに設定を行ってください
 以下は、デフォルトの環境変数設定です。
 ```env
 # エンドポイント
