@@ -14,12 +14,20 @@ const WeatherTable: React.FC<WeatherTableProps> = ({ weatherData }) => {
     if (!weatherData) return null;
 
     const { name, main, weather, wind } = weatherData;
+    const iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
 
     return (
       <TableRow>
         <TableCell>{name}</TableCell>
         <TableCell>{(main.temp - 273.15).toFixed(1)} °C</TableCell>
-        <TableCell>{weather[0].description}</TableCell>
+        <TableCell sx={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src={iconUrl}
+            alt={weather[0].description}
+            style={{ width: '50px', height: '50px', marginRight: '8px' }} // サイズを小さくするためのスタイル
+          />
+          {weather[0].description}
+        </TableCell>
         <TableCell>{wind.speed} m/s</TableCell>
         <TableCell>{wind.deg} °</TableCell>
         <TableCell>{main.humidity} %</TableCell>
