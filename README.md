@@ -10,6 +10,21 @@
 以下は、今回使用した天気APIになります  
 ```OpenWeatherMap Current weather data```  
 
+## 環境変数の設定
+言語設定を変える場合、API KEYを変える場合は、```react-ts-app/.env```の環境変数の設定を行ってください  
+以下は、デフォルトの環境変数の設定ファイルになります  
+```env
+# API URL
+REACT_APP_OW_API_URL=https://api.openweathermap.org/data/2.5/weather
+# 言語設定
+REACT_APP_OW_API_LANG=ja
+# API KEY
+REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
+``` 
+※以下の公式ホームページに各言語の値が記載されています  
+```https://openweathermap.org/current```
+※記載されているAPIキーは、2024/06/06 19:00をもちましてセキュリティの都合上削除します。
+
 ## アプリ ビルド手順
 以下は、ビルド手順になります
 1. 以下のコマンドを実行して、リモートリポジトリをクローンしてください  
@@ -37,20 +52,6 @@
     docker compose down
     ```  
     ※コンテナが立ち上がらない場合は、コンテナを終了し、再度起動してください
-
-## 環境変数の設定
-言語設定を変える場合、API KEYを変える場合は、```react-ts-app/.env```の環境変数の設定を行ってください  
-以下は、デフォルトの環境変数の設定ファイルになります  
-```env
-# API URL
-REACT_APP_OW_API_URL=https://api.openweathermap.org/data/2.5/weather
-# 言語設定
-REACT_APP_OW_API_LANG=ja
-# API KEY
-REACT_APP_OW_API_KEY=f04bc3ac6a635c4ceaaaa69b591e252d
-``` 
-※以下の公式ホームページに各言語の値が記載されています  
-```https://openweathermap.org/current```
 
 ## アプリ 操作方法
 
