@@ -9,7 +9,7 @@ describe('WeatherTable component', () => {
       temp: 300,
       humidity: 80,
     },
-    weather: [{ description: '曇り' }],
+    weather: [{ description: '曇り', icon: '04d' }],
     wind: { speed: 5, deg: 180 },
   };
 
@@ -23,6 +23,9 @@ describe('WeatherTable component', () => {
     expect(screen.queryByText('5 m/s')).not.toBeInTheDocument();
     expect(screen.queryByText('180 °')).not.toBeInTheDocument();
     expect(screen.queryByText('80 %')).not.toBeInTheDocument();
+
+    // アイコンが表示されていないことを確認
+    expect(screen.queryByAltText('天気アイコン')).not.toBeInTheDocument();
   });
 
   test('天気情報が出力されることの確認', () => {
@@ -36,6 +39,14 @@ describe('WeatherTable component', () => {
 
     // 天気が表示されていることを確認
     expect(screen.getByText('曇り')).toBeInTheDocument();
+
+    // 天気アイコンが表示されていることを確認
+    const icon = screen.getByAltText('曇り');
+    expect(icon).toBeInTheDocument();
+    expect(icon).toHaveAttribute(
+      'src',
+      'http://openweathermap.org/img/wn/04d@2x.png'
+    );
 
     // 風速が表示されていることを確認
     expect(screen.getByText('5 m/s')).toBeInTheDocument();
