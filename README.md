@@ -24,7 +24,6 @@ REACT_APP_OW_API_KEY=任意のAPIキーを設定してください
 ※REACT_APP_OW_API_KEYは自身のAPIキーに置き換えてください。APIキーはOpenWeatherMapの公式サイトから取得できます。  
 ※以下の公式ホームページに各言語の値が記載されています  
 ```https://openweathermap.org/current```  
-※記載されているAPIキーは、2024/06/06 19:00をもちましてセキュリティの都合上削除します。
 
 ## アプリ ビルド手順
 以下は、ビルド手順になります
@@ -51,7 +50,7 @@ REACT_APP_OW_API_KEY=任意のAPIキーを設定してください
 
 5. 以下のコマンドはコンテナを終了する際に使用します。
     ```bash
-    docker compose up -d
+    docker compose down
     ```
     ※コンテナが正しく起動しない場合は、終了して再度起動してください。
 
